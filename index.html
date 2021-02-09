@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currency Converter</title>
+    <style>
+      body {
+        background-color: rgb(126, 102, 102);
+      }
+      #heading {
+        color: #b48608;
+        background-color: black;
+        font-family: "Droid serif", serif;
+        text-align: center;
+        margin-top: 0px;
+        padding: 5px;
+      }
+      #demo {
+        text-align: center;
+      }
+      #lab {
+        font-size: 22px;
+        color: rgb(161, 214, 214);
+      }
+      #curButton {
+        font-size: 16px;
+        padding: 5px;
+        color: #b48608;
+        background-color: black;
+      }
+      #cur {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        padding: 5px;
+      }
+      #displayTable {
+        width: 20%;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      #c1 {
+        border: 2px solid #b48608;
+        font-size: 16px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        padding: 5px;
+      }
+      #c2 {
+        border: 2px solid #b48608;
+        font-size: 16px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 id="heading">The Currency Coverter</h2>
+    <div id="demo">
+      <label for="currencies" id="lab">Choose a currency: </label>
+      <select name="currency" id="cur" onchange="displayCurrency(this.value)">
+        <option value="INR">Indian Rupees</option>
+        <option value="GBP">Pound Sterling</option>
+        <option value="USD">US dollar</option>
+        <option value="JPY">Japanese Yen</option>
+        <option value="SEK">Swedesh Crona</option>
+        <option value="RUB">Russian rouble</option>
+        <option value="TRY">Turkish lira</option>
+        <option value="AUD">Australian dollar</option>
+        <option value="BRL">Brazilian real</option>
+        <option value="CNY">Chinese yuan renminb</option>
+        <option value="ILS">Israeli shekel</option>
+        <option value="MYR">Malaysian ringgit</option>
+        <option value="ZAR">South African rand</option>
+        <option value="THB">Thai baht</option>
+        <option value="PHP">Philippine peso</option>
+      </select>
+      <input
+        type="number"
+        id="ipcurrency"
+        oninput="valueConversion(this.value)"
+        placeholder="value for conversion"
+      />
+    </div>
+    <br /><br />
+    <table id="displayTable"></table>
+    <script src="script.js"></script>
+  </body>
+</html>
